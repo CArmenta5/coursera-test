@@ -6,21 +6,21 @@ LunchCheckController.$injection =['$scope']
 function LunchCheckController($scope){
     $scope.dish="";
     $scope.totalDishes=0;
-    $scope.stateOfCheck="Enjoy!";
-
+    $scope.stateOfCheck="";
+   
     $scope.howMany=function (){
-
         var totalDishes=calculatNum($scope.dish);
         if(totalDishes>3){
             $scope.stateOfCheck="Too much!";
+     
+
         }else if(totalDishes>0){
             $scope.stateOfCheck="Enjoy!";
         }else{
             $scope.stateOfCheck="Please enter data first";
-
         }
-    }
-  
+    } 
+   
     function calculatNum(string){
         var total=0;
         var dishes = string.split(",");
@@ -31,6 +31,7 @@ function LunchCheckController($scope){
           }
         return total;
     }
+
 }
 
 })();
