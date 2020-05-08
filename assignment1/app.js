@@ -2,7 +2,7 @@
 'use strict'
 angular.module('LunchCheck',[])
 .controller('LunchCheckController',LunchCheckController);
-LunchCheckController.$injection =['$scope']
+LunchCheckController.$inject =['$scope']
 function LunchCheckController($scope){
     $scope.dish="";
     $scope.totalDishes=0;
