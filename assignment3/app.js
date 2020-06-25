@@ -7,8 +7,7 @@
 
     function FoundItems(){
         var ddo={
-            restrict: 'A',
-
+            restrict: 'E',
             templateUrl: 'loader/foundItems.html',
             scope:{
                 found:'<foundItems',
